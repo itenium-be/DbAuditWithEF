@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -17,11 +17,11 @@ namespace DbAuditWithEF.DatabaseTrigger.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: "SYSTEM_USER"),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "GETDATE()"),
-                    ModifiedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()"),
+                    CreatedBy = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true, defaultValueSql: "SYSTEM_USER"),
+                    ModifiedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ModifiedBy = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {

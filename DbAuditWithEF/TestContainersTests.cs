@@ -5,7 +5,7 @@ using Testcontainers.MsSql;
 
 namespace DbAuditWithEF;
 
-public class TestContainers
+public class TestContainersTests
 {
     [Fact]
     public async Task ConnectionStateReturnsOpen()

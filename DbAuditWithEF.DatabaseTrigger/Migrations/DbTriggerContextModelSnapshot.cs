@@ -31,22 +31,27 @@ namespace DbAuditWithEF.DatabaseTrigger.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasDefaultValueSql("SYSTEM_USER");
 
                     b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<DateTime>("ModifiedOn")
+                    b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
