@@ -1,0 +1,13 @@
+version: '3.8'
+name: DbAuditWithEF
+
+services:
+  sqlserver:
+    build: ./sql-server
+    ports:
+      - 5174:1433
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+volumes:
+  sqlserver_data:
