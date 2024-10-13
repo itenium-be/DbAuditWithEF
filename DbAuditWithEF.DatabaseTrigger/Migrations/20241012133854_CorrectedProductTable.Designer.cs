@@ -4,6 +4,7 @@ using DbAuditWithEF.DatabaseTrigger;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DbAuditWithEF.DatabaseTrigger.Migrations
 {
     [DbContext(typeof(DbTriggerContext))]
-    partial class DbTriggerContextModelSnapshot : ModelSnapshot
+    [Migration("20241012133854_CorrectedProductTable")]
+    partial class CorrectedProductTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
