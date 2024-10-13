@@ -8,9 +8,10 @@ namespace DbAuditWithEF.DatabaseTrigger;
 public class DbTriggerFaultyProduct
 {
     public int Id { get; set; }
+
     [StringLength(100)] // For validation & DB
-    [MaxLength(100)]    // Just for the DB
-    public string Name { get; set; }
+    [MaxLength(100)] // Just for the DB
+    public string Name { get; set; } = "";
 
     public DateTime CreatedOn { get; set; }
     /// <summary>
