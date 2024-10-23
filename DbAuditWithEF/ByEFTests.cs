@@ -1,4 +1,5 @@
 using DbAuditWithEF.ByEF;
+using DbAuditWithEF.Utils;
 
 namespace DbAuditWithEF;
 

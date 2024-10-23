@@ -13,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbAuditWithEF.DatabaseTrigger", "DbAuditWithEF.DatabaseTrigger\DbAuditWithEF.DatabaseTrigger.csproj", "{3AD0525E-E7A5-4707-ADCF-9CF1F334E799}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbAuditWithEF.Utils", "DbAuditWithEF.Utils\DbAuditWithEF.Utils.csproj", "{D65CC77B-DDC6-42B4-9044-17A4E2630BB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbAuditWithEF.Utils", "DbAuditWithEF.Utils\DbAuditWithEF.Utils.csproj", "{D65CC77B-DDC6-42B4-9044-17A4E2630BB0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbAuditWithEF.ByEF", "DbAuditWithEF.ByEF\DbAuditWithEF.ByEF.csproj", "{0C677EDB-D26E-4AE0-8341-155CF3E4A729}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbAuditWithEF.ByReflection", "DbAuditWithEF.ByReflection\DbAuditWithEF.ByReflection.csproj", "{8A5FCECD-3D35-4988-88BB-1944D6474087}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0C677EDB-D26E-4AE0-8341-155CF3E4A729}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C677EDB-D26E-4AE0-8341-155CF3E4A729}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C677EDB-D26E-4AE0-8341-155CF3E4A729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A5FCECD-3D35-4988-88BB-1944D6474087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5FCECD-3D35-4988-88BB-1944D6474087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5FCECD-3D35-4988-88BB-1944D6474087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5FCECD-3D35-4988-88BB-1944D6474087}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
