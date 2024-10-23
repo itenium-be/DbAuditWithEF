@@ -71,9 +71,14 @@ public class ByEFContext(IUserProvider userProvider) : DbContext
             {
                 audit.CreatedOn = DateTime.Now;
                 audit.CreatedBy = userProvider.UserName;
+                audit.ModifiedOn = null;
+                audit.ModifiedBy = null;
             }
             else
             {
+                var originalAudit = entityEntry.Reference(e => e.Audit).TargetEntry!;
+                audit.CreatedBy = originalAudit.OriginalValues.GetValue<string>(nameof(Audit.CreatedBy));
+                audit.CreatedOn = originalAudit.OriginalValues.GetValue<DateTime>(nameof(Audit.CreatedOn));
                 audit.ModifiedOn = DateTime.Now;
                 audit.ModifiedBy = userProvider.UserName;
             }
