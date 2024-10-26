@@ -1,6 +1,8 @@
 Database Auditing with EntityFramework
 ======================================
 
+[itenium blog post](https://itenium.be/blog/dotnet/db-audit-ef/)
+
 Spin up a SqlServer
 
 ```sh
