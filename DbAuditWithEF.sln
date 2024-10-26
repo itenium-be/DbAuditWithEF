@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbAuditWithEF.ByReflection"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbAuditWithEF.DatabaseTable", "DbAuditWithEF.DatabaseTable\DbAuditWithEF.DatabaseTable.csproj", "{E4C7E3CB-6A7E-49F2-9815-D5F7749CD6DB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbAuditWithEF.EFTable", "DbAuditWithEF.EFTable\DbAuditWithEF.EFTable.csproj", "{1DE43140-CDD0-4305-A106-9BE1839CE485}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{E4C7E3CB-6A7E-49F2-9815-D5F7749CD6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4C7E3CB-6A7E-49F2-9815-D5F7749CD6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4C7E3CB-6A7E-49F2-9815-D5F7749CD6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DE43140-CDD0-4305-A106-9BE1839CE485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DE43140-CDD0-4305-A106-9BE1839CE485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DE43140-CDD0-4305-A106-9BE1839CE485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DE43140-CDD0-4305-A106-9BE1839CE485}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
