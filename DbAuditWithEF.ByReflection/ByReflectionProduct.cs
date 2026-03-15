@@ -18,8 +18,8 @@ public class Audit
 {
     private DateTime _createdOn = default!;
     private string _createdBy = "";
-    private DateTime? _modifiedOn;
-    private string? _modifiedBy;
+    private DateTime? _modifiedOn = null;
+    private string? _modifiedBy = null;
 
     public DateTime CreatedOn => _createdOn;
     [MaxLength(100)]
