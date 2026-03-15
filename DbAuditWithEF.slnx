@@ -10,5 +10,6 @@
   <Project Path="DbAuditWithEF.DatabaseTable/DbAuditWithEF.DatabaseTable.csproj" />
   <Project Path="DbAuditWithEF.DatabaseTrigger/DbAuditWithEF.DatabaseTrigger.csproj" />
   <Project Path="DbAuditWithEF.EFTable/DbAuditWithEF.EFTable.csproj" />
+  <Project Path="DbAuditWithEF.ByInterceptor/DbAuditWithEF.ByInterceptor.csproj" />
   <Project Path="DbAuditWithEF.Utils/DbAuditWithEF.Utils.csproj" />
 </Solution>

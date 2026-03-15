@@ -20,6 +20,7 @@
     <ProjectReference Include="..\DbAuditWithEF.DatabaseTable\DbAuditWithEF.DatabaseTable.csproj" />
     <ProjectReference Include="..\DbAuditWithEF.DatabaseTrigger\DbAuditWithEF.DatabaseTrigger.csproj" />
     <ProjectReference Include="..\DbAuditWithEF.EFTable\DbAuditWithEF.EFTable.csproj" />
+    <ProjectReference Include="..\DbAuditWithEF.ByInterceptor\DbAuditWithEF.ByInterceptor.csproj" />
   </ItemGroup>
 
   <ItemGroup>
