@@ -13,6 +13,15 @@ Port: 5174
 Login: sa / password123!
 
 
+Build & Test
+------------
+
+```sh
+dotnet build DbAuditWithEF.slnx
+dotnet test DbAuditWithEF.slnx
+```
+
+
 EF Migrations
 -------------
 

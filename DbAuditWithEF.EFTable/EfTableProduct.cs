@@ -18,12 +18,12 @@ public class EfAudit
 {
     public int Id { get; set; }
     [MaxLength(100)]
-    public string TableName { get; set; }
+    public string TableName { get; set; } = null!;
     public int TableId { get; set; }
     public EntityState ActionType { get; set; }
     public string? OldValues { get; set; }
     public string? NewValues { get; set; }
     public DateTime ModifiedOn { get; set; }
     [MaxLength(100)]
-    public string ModifiedBy { get; set; }
+    public string ModifiedBy { get; set; } = null!;
 }

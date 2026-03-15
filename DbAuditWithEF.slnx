@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="DbAuditWithEF/DbAuditWithEF.csproj" />
+  <Project Path="DbAuditWithEF.ByEF/DbAuditWithEF.ByEF.csproj" />
+  <Project Path="DbAuditWithEF.ByReflection/DbAuditWithEF.ByReflection.csproj" />
+  <Project Path="DbAuditWithEF.DatabaseTable/DbAuditWithEF.DatabaseTable.csproj" />
+  <Project Path="DbAuditWithEF.DatabaseTrigger/DbAuditWithEF.DatabaseTrigger.csproj" />
+  <Project Path="DbAuditWithEF.EFTable/DbAuditWithEF.EFTable.csproj" />
+  <Project Path="DbAuditWithEF.Utils/DbAuditWithEF.Utils.csproj" />
+</Solution>
