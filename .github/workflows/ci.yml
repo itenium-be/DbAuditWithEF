@@ -35,8 +35,27 @@ jobs:
       - name: Restore
         run: dotnet restore
 
+      - name: Install EF tools
+        run: dotnet tool install --global dotnet-ef
+
       - name: Build
         run: dotnet build --no-restore
+
+      - name: Create databases
+        run: |
+          sqlcmd -S localhost,5174 -U sa -P password123! -C -Q "CREATE DATABASE DatabaseTable"
+          sqlcmd -S localhost,5174 -U sa -P password123! -C -Q "CREATE DATABASE DatabaseTrigger"
+          sqlcmd -S localhost,5174 -U sa -P password123! -C -Q "CREATE DATABASE EfTable"
+          sqlcmd -S localhost,5174 -U sa -P password123! -C -Q "CREATE DATABASE ByReflection"
+          sqlcmd -S localhost,5174 -U sa -P password123! -C -Q "CREATE DATABASE ByEF"
+
+      - name: Run migrations
+        run: |
+          dotnet ef database update --project DbAuditWithEF.DatabaseTable
+          dotnet ef database update --project DbAuditWithEF.DatabaseTrigger
+          dotnet ef database update --project DbAuditWithEF.EFTable
+          dotnet ef database update --project DbAuditWithEF.ByReflection
+          dotnet ef database update --project DbAuditWithEF.ByEF
 
       - name: Test
         run: dotnet test --no-build --verbosity normal
