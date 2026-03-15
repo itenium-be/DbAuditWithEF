@@ -43,11 +43,13 @@ jobs:
 
       - name: Create databases
         run: |
-          sqlcmd -S localhost,5174 -U sa -P password123! -C -Q "CREATE DATABASE DatabaseTable"
-          sqlcmd -S localhost,5174 -U sa -P password123! -C -Q "CREATE DATABASE DatabaseTrigger"
-          sqlcmd -S localhost,5174 -U sa -P password123! -C -Q "CREATE DATABASE EfTable"
-          sqlcmd -S localhost,5174 -U sa -P password123! -C -Q "CREATE DATABASE ByReflection"
-          sqlcmd -S localhost,5174 -U sa -P password123! -C -Q "CREATE DATABASE ByEF"
+          docker exec $(docker ps -q --filter ancestor=mcr.microsoft.com/mssql/server:2022-latest) \
+            /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P password123! -C -Q "
+              CREATE DATABASE DatabaseTable;
+              CREATE DATABASE DatabaseTrigger;
+              CREATE DATABASE EfTable;
+              CREATE DATABASE ByReflection;
+              CREATE DATABASE ByEF;"
 
       - name: Run migrations
         run: |
