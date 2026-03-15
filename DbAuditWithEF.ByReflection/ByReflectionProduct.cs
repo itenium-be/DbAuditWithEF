@@ -16,12 +16,10 @@ public interface IAudit
 
 public class Audit
 {
-#pragma warning disable CS0649 // Field is never assigned to - set by EF via reflection
-    private DateTime _createdOn;
+    private DateTime _createdOn = default!;
     private string _createdBy = "";
     private DateTime? _modifiedOn;
     private string? _modifiedBy;
-#pragma warning restore CS0649
 
     public DateTime CreatedOn => _createdOn;
     [MaxLength(100)]
