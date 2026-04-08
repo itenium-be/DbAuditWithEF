@@ -45,6 +45,7 @@ The Ways
 
 - DatabaseTrigger: Set CreatedBy/On and ModifiedBy/On with a database trigger.
 - ByEF: Same but set with Entity Framework. Use a ComplexType `IAudit` and overwrite manual changes to the properties.
+- ByInterceptor: Same as ByEF but using a `SaveChangesInterceptor` for better separation of concerns.
 - ByReflection: Totally avoid setting the properties manually by making them private and using reflection.
 - DatabaseTable: Keep changes in a separate table with a database trigger.
 - EFTable: Same but insert records with Entity Framework.
