@@ -10,7 +10,7 @@ public class TestContainersTests
     [Fact]
     public async Task ConnectionStateReturnsOpen()
     {
-        var mssqlContainer = new MsSqlBuilder()
+        var mssqlContainer = new MsSqlBuilder("mcr.microsoft.com/mssql/server:2022-latest")
             .WithPassword("yourStrong(!)Password")
             .Build();
 
